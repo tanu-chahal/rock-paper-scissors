@@ -1,0 +1,12 @@
+@import  url("https://fonts.google.com/specimen/Barlow+Semi+Condensed");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("https://fonts.google.com/specimen/Barlow+Semi+Condensed");
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }

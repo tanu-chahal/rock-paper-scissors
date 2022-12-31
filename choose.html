@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <!-- Score 
+  Rules
+
+  You Picked
+  The House Picked
+
+  You Win
+  You Lose
+
+  Play Again
+-->
+ 
+</head>
+<body class="font-[Barlow Semi Condensed]">
+<div class="rules w-full bg-white hidden">
+  <button class="close absolute left-[50%] top-[85%]"><img src="./images/icon-close.svg" alt="close"></button>
+  <h1 class=" font-[700] my-24 text-center text-3xl text-darkText ">RULES</h1>
+  <img class="mx-auto" src="./images/image-rules.svg" alt="rules">
+  </div> 
+
+  <div class="choice flex flex-col justify-center items-center bg-gradient-to-b from-[#1f3756] to-[#141539]">
+
+        <div class="header border-4 border-headerOutline p-4 rounded-md my-16 flex flex-row items-center justify-around">
+          <div class="name text-white text-lg font-[700] flex flex-col items-start justify-center space-y-0"> 
+            <span class="leading-[.90rem]">ROCK</span>
+            <span class="leading-[.90rem]">PAPER</span>
+            <span class="leading-[.90rem]">SCISSORS</span>
+          </div>
+          <div class="score px-4 py-2 bg-white rounded-sm flex flex-col items-center justify-center ml-24">
+            <span class="text-blue-700 text-xs">Score</span>
+            <span class="text-xl text-gray-400 font-[700]">12</span>
+          </div>
+        </div>
+
+        <div class="options">
+        <img id="triangle" class="h-[215px] mx-auto" src="./images/bg-triangle.svg" alt="">
+        <div class="">
+          <div id="paper" class="circle cursor-pointer relative -top-60 p-4 bg-white rounded-full h-20 w-20 flex flex-row items-center justify-center border-8 border-[#4865f4]"><button><img src="./images/icon-paper.svg" alt="paper"></button></div>
+
+          <div id="scissors" class="circle cursor-pointer relative -top-80 left-[180px] p-4 bg-white rounded-full h-20 w-20 flex flex-row items-center justify-center border-8 border-[#ec9e0e]"><button><img src="./images/icon-scissors.svg" alt="scissors"></button></div>
+  
+          <div id="rock" class="circle cursor-pointer relative -top-60 left-[90px] p-4 bg-white rounded-full h-20 w-20 flex flex-row items-center justify-center border-8 border-[#dc2e4e]"><button><img src="./images/icon-rock.svg" alt="rock"></button></div>
+        </div>
+       </div>
+       
+        <button class="bg-darkText fixed bottom-20 text-white border-2 border-gray-400 py-1 px-2 rounded-md my-10">Rules</button>
+
+  </div>
+  
+  <!-- <div class="attribution"> 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Tanu Chahal</a>.-->
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
