@@ -75,11 +75,11 @@ chooseBtn.map(cBtn =>{
         }
         
         picks.innerHTML= `<div class="your flex flex-col justify-center items-center mx-5 max-w-24">
-        <div  class="yourCircle p-4 bg-white rounded-full h-24 w-24 flex flex-row items-center justify-center border-8 border-[${clr}]"><img id="yourChoice" src="./images/icon-${text}.svg" alt="scissors"></div>
+        <div  class="yourCircle p-4 bg-white rounded-full h-24 w-24 flex flex-row items-center justify-center border-8 border-[${clr}] shadow-[0px_4px_2px_inset] shadow-slate-400 md:h-40 md:w-40 md:border-[18px] md:shadow-[0px_7px_2px_inset] md:shadow-slate-400 md:p-7"><img class="md:h-20" id="yourChoice" src="./images/icon-${text}.svg" alt="scissors"></div>
         <span class="font-[600] text-white my-3 text-sm">YOU PICKED</span>
      </div>
      <div class="computer flex flex-col justify-center items-center mx-5 max-w-20">
-        <div class="circle p-4 bg-white rounded-full h-24 w-24 flex flex-row items-center justify-center border-8 border-[${bClr}]"><img id="compChoice" src="./images/icon-${comImg}.svg" alt="scissors"></div>
+        <div class="circle p-4 bg-white rounded-full h-24 w-24 flex flex-row items-center justify-center border-8 border-[${bClr}] shadow-[0px_4px_2px_inset] shadow-slate-400 md:h-40 md:w-40 md:border-[18px] md:shadow-[0px_7px_2px_inset] md:shadow-slate-400 md:p-7"><img class="md:h-20" id="compChoice" src="./images/icon-${comImg}.svg" alt="scissors"></div>
         <span class="font-[600] text-white my-3 text-sm">COMPUTER PICKED</span>
      </div>`
 
