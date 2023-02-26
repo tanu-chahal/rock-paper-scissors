@@ -1,95 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./style.css">
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body
+    class="font-[Barlow Semi Condensed] bg-gradient-to-b from-[#1f3756] to-[#141539]"
+  >
+    <div
+      class="rules bg-white flex flex-col items-center justify-center md:max-w-[50%] md:rounded-md md:mx-auto md:max-h-[50%] md:absolute md:left-[40%] md:top-[30%] md:px-7 md:py-8 md:z-10 md:hidden"
+    >
+      <h1 class="font-[700] my-24 text-center text-3xl text-darkText md:my-6">
+        RULES
+      </h1>
+      <img class="mx-auto md:m-5 md:h-56" src="./images/image-rules.svg" alt="rules" />
 
-</head>
-<body class="font-[Barlow Semi Condensed] bg-gradient-to-b from-[#1f3756] to-[#141539]">
-<div class="rules bg-white flex flex-col items-center justify-center md:max-w-[50%] md:rounded-md md:mx-auto md:max-h-[50%] md:absolute md:left-[40%] md:top-[30%] md:z-10 md:hidden">
+      <button
+        class="close mt-24 mb-10 p-3 mx-auto cursor-pointer md:mt-5 md:mb-2 md:absolute md:left-[72%] md:bottom-[80%]"
+      >
+        <img src="./images/icon-close.svg" alt="close" />
+      </button>
+    </div>
 
-  <h1 class=" font-[700] my-24 text-center text-3xl text-darkText md:my-6">RULES</h1>
-  <img class="mx-auto md:m-5" src="./images/image-rules.svg" alt="rules">
-
-  <button class="close mt-24 mb-10 p-3 mx-auto cursor-pointer md:mt-5 md:mb-2 md:absolute md:left-[70%] md:bottom-[84%]">
-    <img src="./images/icon-close.svg" alt="close"></button>
-  </div> 
-
-  <div class="choice hidden flex-col justify-center items-center">
-
-        <div class="header border-4 border-headerOutline p-4 rounded-md my-16 flex flex-row items-center justify-around md:p-6">
-          <div class="name text-white text-lg font-[700] flex flex-col items-start justify-center space-y-0 md:text-3xl"> 
-            <span class="leading-[.90rem] md:leading-[1.4rem]">ROCK</span>
-            <span class="leading-[.90rem] md:leading-[1.4rem]">PAPER</span>
-            <span class="leading-[.90rem] md:leading-[1.4rem]">SCISSORS</span>
-          </div>
-          <div class="px-4 py-2 bg-white rounded-sm flex flex-col items-center justify-center ml-24 md:ml-96 md:px-6 md:py-3 md:rounded-md">
-            <span class="text-blue-700 text-xs md:text-sm">Score</span>
-            <span class="score text-xl text-gray-400 font-[700] md:text-4xl">0</span>
-          </div>
+    <div class="choice hidden flex-col justify-center items-center">
+      <div
+        class="header border-4 border-headerOutline p-4 rounded-md my-16 flex flex-row items-center justify-around md:p-6"
+      >
+        <div
+          class="name text-white text-lg font-[700] flex flex-col items-start justify-center space-y-0 md:text-3xl"
+        >
+          <span class="leading-[.90rem] md:leading-[1.4rem]">ROCK</span>
+          <span class="leading-[.90rem] md:leading-[1.4rem]">PAPER</span>
+          <span class="leading-[.90rem] md:leading-[1.4rem]">SCISSORS</span>
         </div>
+        <div
+          class="px-4 py-2 bg-white rounded-sm flex flex-col items-center justify-center ml-24 md:ml-96 md:px-6 md:py-3 md:rounded-md"
+        >
+          <span class="text-blue-700 text-xs md:text-sm">Score</span>
+          <span class="score text-xl text-gray-400 font-[700] md:text-4xl"
+            >0</span
+          >
+        </div>
+      </div>
 
-        <div class="options my-10">
-        <img id="triangle" class="h-[215px] mx-auto md:h-[280px] md:mt-16" src="./images/bg-triangle.svg" alt="">
+      <div class="options my-10">
+        <img
+          id="triangle"
+          class="h-[215px] mx-auto md:h-[280px] md:mt-16"
+          src="./images/bg-triangle.svg"
+          alt=""
+        />
         <div class="md:h-16">
-          <div data-border-clr= "#4865f4" class="circle cursor-pointer relative -top-60 p-4 bg-white rounded-full h-20 w-20 flex flex-row items-center justify-center border-8 border-[#4865f4] shadow-[0px_4px_2px_inset] shadow-slate-400 md:h-40 md:w-40 md:border-[18px] md:shadow-[0px_7px_2px_inset] md:shadow-slate-400 md:p-7 md:-mx-10 md:-top-[20rem]"><button class="chooseBtn" id="paper" data-option="paper" ><img class="md:h-20" src="./images/icon-paper.svg" alt="paper"></button></div>
+          <div
+            data-border-clr="#4865f4"
+            class="circle cursor-pointer relative -top-60 p-4 bg-white rounded-full h-20 w-20 flex flex-row items-center justify-center border-8 border-[#4865f4] shadow-[0px_4px_2px_inset] shadow-slate-400 md:h-40 md:w-40 md:border-[18px] md:shadow-[0px_7px_2px_inset] md:shadow-slate-400 md:p-7 md:-mx-10 md:-top-[20rem]"
+          >
+            <button class="chooseBtn" id="paper" data-option="paper">
+              <img class="md:h-20" src="./images/icon-paper.svg" alt="paper" />
+            </button>
+          </div>
 
-          <div data-border-clr= "#ec9e0e" class="circle cursor-pointer relative -top-80 left-[180px] p-4 bg-white rounded-full h-20 w-20 flex flex-row items-center justify-center border-8 border-[#ec9e0e] shadow-[0px_4px_2px_inset] shadow-slate-400 md:h-40 md:w-40 md:border-[18px] md:shadow-[0px_7px_2px_inset] md:shadow-slate-400 md:p-7 md:mx-5 md:-top-[30.2rem]"><button class="chooseBtn" id="scissors" data-option="scissors"><img class="md:h-20" src="./images/icon-scissors.svg" alt="scissors"></button></div>
-  
-          <div data-border-clr= "#dc2e4e" class="circle cursor-pointer relative -top-60 left-[90px] p-4 bg-white rounded-full h-20 w-20 flex flex-row items-center justify-center border-8 border-[#dc2e4e] shadow-[0px_4px_2px_inset] shadow-slate-400 md:h-40 md:w-40 md:border-[18px] md:shadow-[0px_7px_2px_inset] md:shadow-slate-400 md:p-7 md:-top-[28rem]"><button class="chooseBtn" id="rock" data-option="rock"><img class="md:h-20" src="./images/icon-rock.svg" alt="rock"></button></div>
+          <div
+            data-border-clr="#ec9e0e"
+            class="circle cursor-pointer relative -top-80 left-[180px] p-4 bg-white rounded-full h-20 w-20 flex flex-row items-center justify-center border-8 border-[#ec9e0e] shadow-[0px_4px_2px_inset] shadow-slate-400 md:h-40 md:w-40 md:border-[18px] md:shadow-[0px_7px_2px_inset] md:shadow-slate-400 md:p-7 md:mx-5 md:-top-[30.2rem]"
+          >
+            <button class="chooseBtn" id="scissors" data-option="scissors">
+              <img
+                class="md:h-20"
+                src="./images/icon-scissors.svg"
+                alt="scissors"
+              />
+            </button>
+          </div>
+
+          <div
+            data-border-clr="#dc2e4e"
+            class="circle cursor-pointer relative -top-60 left-[90px] p-4 bg-white rounded-full h-20 w-20 flex flex-row items-center justify-center border-8 border-[#dc2e4e] shadow-[0px_4px_2px_inset] shadow-slate-400 md:h-40 md:w-40 md:border-[18px] md:shadow-[0px_7px_2px_inset] md:shadow-slate-400 md:p-7 md:-top-[28rem]"
+          >
+            <button class="chooseBtn" id="rock" data-option="rock">
+              <img class="md:h-20" src="./images/icon-rock.svg" alt="rock" />
+            </button>
+          </div>
         </div>
       </div>
 
-   <button class="rulesBtn absolute top-[575px] bg-darkText text-white border-2 border-gray-400 py-1 px-2 rounded-md md:self-end md:mx-20">Rules</button>
-
-  </div>
-
-  <div class="final flex-col justify-center items-center hidden md:h-full">
-
-    <div class="header border-4 border-headerOutline p-4 rounded-md my-16 flex flex-row items-center justify-around md:p-6">
-      <div class="name text-white text-lg font-[700] flex flex-col items-start justify-center space-y-0 md:text-3xl"> 
-        <span class="leading-[.90rem] md:leading-[1.4rem]">ROCK</span>
-        <span class="leading-[.90rem] md:leading-[1.4rem]">PAPER</span>
-        <span class="leading-[.90rem] md:leading-[1.4rem]">SCISSORS</span>
-      </div>
-      <div class=" px-4 py-2 bg-white rounded-sm flex flex-col items-center justify-center ml-24  md:ml-96 md:px-6 md:py-3 md:rounded-md">
-        <span class="text-blue-700 text-xs md:text-sm">Score</span>
-        <span class="score text-xl text-gray-400 font-[700] md:text-4xl">0</span>
-      </div>
+      <button
+        class="rulesBtn absolute top-[575px] bg-darkText text-white border-2 border-gray-400 py-1 px-2 rounded-md md:self-end md:mx-20"
+      >
+        Rules
+      </button>
     </div>
 
-    <div class="picks flex flex-row items-center justify-between mx-auto my-5 md:my-12">
-         <!-- <div class="your flex flex-col justify-center items-center mx-5 max-w-24">
-            <div  class="yourCircle p-4 bg-white rounded-full h-24 w-24 flex flex-row items-center justify-center border-8 "><img id="yourChoice" src="./images/icon-scissors.svg" alt="scissors"></div>
-            <span class="font-[600] text-white my-3 text-sm">YOU PICKED</span>
-         </div>
-         <div class="computer flex flex-col justify-center items-center mx-5 max-w-20">
-            <div class="circle p-4 bg-white rounded-full h-24 w-24 flex flex-row items-center justify-center border-8 border-[#ec9e0e]"><img id="compChoice" src="./images/icon-scissors.svg" alt="scissors"></div>
-            <span class="font-[600] text-white my-3 text-sm">COMPUTER PICKED</span>
-         </div> -->
-    </div>
+    <div class="final flex-col justify-center items-center hidden md:h-full">
+      <div
+        class="header border-4 border-headerOutline p-4 rounded-md my-16 flex flex-row items-center justify-around md:p-6"
+      >
+        <div
+          class="name text-white text-lg font-[700] flex flex-col items-start justify-center space-y-0 md:text-3xl"
+        >
+          <span class="leading-[.90rem] md:leading-[1.4rem]">ROCK</span>
+          <span class="leading-[.90rem] md:leading-[1.4rem]">PAPER</span>
+          <span class="leading-[.90rem] md:leading-[1.4rem]">SCISSORS</span>
+        </div>
+        <div
+          class="px-4 py-2 bg-white rounded-sm flex flex-col items-center justify-center ml-24 md:ml-96 md:px-6 md:py-3 md:rounded-md"
+        >
+          <span class="text-blue-700 text-xs md:text-sm">Score</span>
+          <span class="score text-xl text-gray-400 font-[700] md:text-4xl"
+            >0</span
+          >
+        </div>
+      </div>
 
-   <div class="res flex flex-col items-center justify-center">
-    <span id="result" class="text-white text-[2.5rem] font-[700] mt-8">TIE MATCH</span>
-  <button class="again bg-white text-darkText py-2 px-3 rounded-md font-[600] mt-3 self-stretch">PLAY AGAIN</button>
-   </div>
-    <button class="rulesBtn bg-darkText text-white border-2 border-gray-400 py-1 px-2 rounded-md my-10 md:self-end md:mx-20">Rules</button>
-    
-    <div class="matchEnd bg-white rounded-md absolute bottom-[9%] max-w-[75%] px-4 py-6 shadow hidden">
-      <span class="endMsg text-darkText text-[2.2rem] font-[700]"></span>
-      <p class="endText text-darkText font-[600] my-3"></p>
-      <button class="again text-white bg-darkText py-2 px-3 rounded-md font-[600] mt-3 ">PLAY AGAIN</button>
-  </div>
-</div>
-  <!-- <div class="attribution"> 
+      <div
+        class="picks flex flex-row items-center justify-between mx-auto my-5 md:my-12 md:h-52"
+      ></div>
+
+      <div class="res flex flex-col items-center justify-center">
+        <span id="result" class="text-white text-[2.5rem] font-[700] mt-8"
+          >TIE MATCH</span
+        >
+        <button
+          class="again bg-white text-darkText py-2 px-3 rounded-md font-[600] mt-3 self-stretch"
+        >
+          PLAY AGAIN
+        </button>
+      </div>
+      <button
+        class="rulesBtn bg-darkText text-white border-2 border-gray-400 py-1 px-2 rounded-md my-10 md:self-end md:mx-20"
+      >
+        Rules
+      </button>
+
+      <div
+        class="matchEnd bg-white rounded-md absolute bottom-[9%] max-w-[75%] px-4 py-6 shadow hidden"
+      >
+        <span class="endMsg text-darkText text-[2.2rem] font-[700]"></span>
+        <p class="endText text-darkText font-[600] my-3"></p>
+        <button
+          class="again text-white bg-darkText py-2 px-3 rounded-md font-[600] mt-3"
+        >
+          PLAY AGAIN
+        </button>
+      </div>
+    </div>
+    <!-- <div class="attribution"> 
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Tanu Chahal</a>.
   </div>-->
 
-  <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
