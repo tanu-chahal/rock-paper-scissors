@@ -22,14 +22,13 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 closeBtn.addEventListener("click", function () {
-  rules.classList.add("hidden","md:hidden");
+  rules.classList.add("hidden");
   rules.classList.remove("flex");
   choice.classList.remove("hidden");
   choice.classList.add("flex");
   final.classList.remove("flex");
   final.classList.add("hidden");
   rulesBtn.forEach((rBtn) =>{
-   //if(rBtn.classList.contains("hidden"))
    rBtn.classList.remove("hidden");
    rBtn.classList.add("block");
   })
@@ -37,7 +36,7 @@ closeBtn.addEventListener("click", function () {
 
 rulesBtn.map((rBtn) => {
   rBtn.addEventListener("click", function () {
-    if (rules.classList.contains("md:hidden")) {
+    if (window.innerWidth>767) {
       rules.classList.remove("hidden","md:hidden");
       rules.classList.add("flex");
       rBtn.classList.add("hidden");
