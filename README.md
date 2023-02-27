@@ -1,7 +1,6 @@
 # Frontend Mentor - Rock, Paper, Scissors
 
-![Preview for the Rock, Paper, Scissors](https://github.com/tanu-chahal/]
-rock-paper-scissors/blob/master/images/RPS Preview.png?raw=true)
+![Preview for the Rock, Paper, Scissors](https://github.com/tanu-chahal/rock-paper-scissors/blob/master/images/RPSPreview.png?raw=true)
 
 ### Frontend Mentor - Rock, Paper, Scissors solution
 
